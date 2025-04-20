@@ -58,7 +58,7 @@ public sealed class Board : MonoBehaviour
 
         if (!_selection.Contains(tile)) _selection.Add(tile);
 
-        /*** this part is to disable swap between tiles that are not neighbours
+        /*** this part is to disable swap between tiles that are not neighbours 
         
         if (_selection.Count == 2) {
             var dx = Mathf.Abs(_selection[0].x - _selection[1].x);
@@ -70,6 +70,7 @@ public sealed class Board : MonoBehaviour
                 return;
             }
         }
+        
         ***/
 
         if (_selection.Count < 2) return;
