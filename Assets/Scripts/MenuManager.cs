@@ -9,7 +9,7 @@ public class MenuManager : MonoBehaviour
 
     public void StartGame()
     {
-        StartCoroutine(PlayClickThen(() => SceneManager.LoadScene("GameScene")));
+        StartCoroutine(PlayClickThen(() => SceneManager.LoadScene("GameScene_BloomingLight")));
     }
 
     public void ExitGame()
@@ -48,7 +48,7 @@ public class MenuManager : MonoBehaviour
     {
         PlayClick();
         yield return new WaitForSeconds(audioSource.clip.length); // wait for click sound to finish
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene("MenuScene_BloomingLight");
     }
 
 

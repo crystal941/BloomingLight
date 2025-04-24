@@ -1,9 +1,12 @@
+using System;
 using TMPro;
 using UnityEngine;
 
 public sealed class Score : MonoBehaviour
 {
     public static Score Instance { get; private set; }
+
+    public event Action OnWin;
 
     private int _score;
 
@@ -16,6 +19,10 @@ public sealed class Score : MonoBehaviour
             _score = value;
 
             scoreText.SetText($"Score: {_score}");
+
+            if (_score >= 50) {
+                OnWin?.Invoke(); // Fire win event
+            }
         }
     }
 
